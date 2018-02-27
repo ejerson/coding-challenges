@@ -1,0 +1,28 @@
+// Iterative Solution - mine lol
+    public int numJewelsInStones(String J, String S) {
+        int counter = 0;
+        String[] JB = J.split("");
+        String[] SB = S.split("");
+
+        // loop through J and compare each value to each S
+        for (int i = 0; i < JB.length; i++) {
+            for (int j = 0; j < SB.length; j++) {
+                if (JB[i].matches(SB[j])) {
+                    counter++;
+
+                }
+            }
+        }
+        return counter;
+    }
+
+
+// Solution using HashSet - Jianghan Li
+
+public int numJewelsInStones(String J, String S) {
+        int res = 0;
+        Set setJ = new HashSet();
+        for (char j: J.toCharArray()) setJ.add(j);
+        for (char s: S.toCharArray()) if (setJ.contains(s)) res++;
+        return res;
+    }

@@ -1,0 +1,11 @@
+
+
+public int hammingDistance(int x, int y) {
+      // ^ sets that are set in either is set in the result
+      //
+      return Integer.bitCount(x ^ y);
+}
+
+
+// find two's complement
+https://www.cs.cornell.edu/~tomf/notes/cps104/twoscomp.html
