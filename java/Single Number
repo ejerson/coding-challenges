@@ -1,0 +1,18 @@
+public int singleNumber(int[] nums) {
+       Set setA = new HashSet();
+       int neo = 0;
+
+       // loops through the array
+       for (int num : nums) {
+         if (setA.add(num) == false) {
+          // keep cycling through the array if a number has already been added
+           continue;
+         } else {
+          // if the number added has no duplicate, save that number in neo
+           neo = num;
+         }
+       }
+
+      // returns the one
+      return neo;
+   }
