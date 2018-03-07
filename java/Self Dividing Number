@@ -1,0 +1,61 @@
+// loop through each number and check if
+// DO NOT ADD TO (not self dividing) the list if
+// 1. the number is equal to 0
+// 2. if each digit of a number,
+// when modularly divided by the entire value will return 0
+
+// 3. add to the list if it passes the check discussed above
+
+// What is being asked?
+// A number is considered self dividing if?
+
+
+public class SelfDividing {
+
+  public static void main(String[] args) {
+    selfDividingNumbers(1, 22);
+  }
+
+  public static List<Integer> selfDividingNumbers(int left, int right) {
+
+    List<Integer> all = new ArrayList<>();
+
+    for (int i = left; i <= right; i++) {
+        // iteration of each number from left to right
+        // pass the number to a method that checks if it is self dividing
+        if (selfDividing(i)) {
+          // add a number if it passes the selfDividing test
+          all.add(i);
+
+        }
+
+    }
+
+    return all;
+}
+
+ public static boolean selfDividing(int indNum) {
+        // convert indNum into a string
+        String num = indNum + "";
+
+        // split indNum into individual digits
+        String[] indDig = num.split("");
+
+        // loop through each digit
+        // check for their self divisibility
+        for (String digit : indDig) {
+          int d = Integer.parseInt(digit);
+
+          // IF digit is equal to 0
+          // OR IF number % digit = 0
+          // THREREFORE the number is not selfDividing
+          // if (n = 0 || )
+          if (d == 0 || (Integer.parseInt(num) % d > 0)) {
+            return false;
+          }
+
+        }
+        return true;
+
+    }
+}

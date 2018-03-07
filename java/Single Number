@@ -16,3 +16,14 @@ public int singleNumber(int[] nums) {
       // returns the one
       return neo;
    }
+
+
+   // IMPORTANT: ABOVE CODE FAILED, BELOW IS BETTER
+
+   public int singleNumber(int[] nums) {
+        int n = nums.length;
+
+        for (int i = 1; i < n; ++i)
+          nums[0] = nums[0] ^ nums[i];
+         return nums[0];
+    }
