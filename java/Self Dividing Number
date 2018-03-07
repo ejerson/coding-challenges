@@ -26,7 +26,6 @@ public class SelfDividing {
         if (selfDividing(i)) {
           // add a number if it passes the selfDividing test
           all.add(i);
-
         }
 
     }
@@ -47,7 +46,7 @@ public class SelfDividing {
           int d = Integer.parseInt(digit);
 
           // IF digit is equal to 0
-          // OR IF number % digit = 0
+          // OR IF number % digit > 0
           // THREREFORE the number is not selfDividing
           // if (n = 0 || )
           if (d == 0 || (Integer.parseInt(num) % d > 0)) {
