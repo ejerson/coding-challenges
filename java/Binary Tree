@@ -1,0 +1,51 @@
+/* https://www.youtube.com/watch?v=oSWTXtMglKE
+TREE | has only one root
+CHILD | nodes with children, not root
+LEAF | nodes with no children
+
+BINARY TREE | each node has no more than two child node
+BINARY SEARCH TREE | a binary tree
+    * left nodes are less than the root node, which are less
+    than all of the right node (ordering makes finding a node very fast)
+
+INSERT | if a number is bigger than the root node, place it on the right
+otherwise place it on the left
+
+TRAVERSING | walking through a tree
+              B
+             / \
+            A   C
+
+    * INORDER TRAVERSAL | left then root then right (A, B, C)
+          * TYPICALLY USED
+          * Allows us to print elements in order
+    * PREORDER TRAVERSAL | root then left then right (B, A, C)
+    * POSTORDER TRAVERSAL | left then right then root (A, C, B)
+
+BALANCED THREE
+
+       4
+     /   \
+    2     5
+   / \     \
+  1   3     6
+
+UNBALANCED TREE
+
+    1
+     \
+      2
+       \
+        3
+         \
+          4
+
+
+NOTE: there are a lot of algorithms that are built into a program
+to ensure that a tree is balanced
+
+INTERVIEWS: assume that you have a balanced tree
+
+
+
+*/
